@@ -20,8 +20,6 @@ int sensorValue = digitalRead(sensorpin);
    startPlayback(sample, sizeof(sample));digitalWrite(led,HIGH);
    delay(4000);
    
- 
-   
    
 }
 else if (sensorValue == 0);

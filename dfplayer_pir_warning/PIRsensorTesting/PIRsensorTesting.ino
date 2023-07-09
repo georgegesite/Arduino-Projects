@@ -26,9 +26,7 @@ void setup() {
 
 void loop() {
   pirValue = digitalRead(pirPin);
-  if(pirValue == HIGH)
-  {
-  digitalWrite(ledPin, HIGH); // Write the PIR value to the buildin LED
-  } // Read the PIR value
+  digitalWrite(ledPin, pirValue); // Write the PIR value to the buildin LED
+   // Read the PIR value
 
 }

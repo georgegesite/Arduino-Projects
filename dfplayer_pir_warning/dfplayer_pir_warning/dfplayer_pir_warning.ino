@@ -32,22 +32,16 @@ void setup() {
   }
   Serial.println(F("DFPlayer Mini online."));
   digitalWrite(GREEN_LED, HIGH);  
-
   //Set volume value (From 0 to 30)
   myDFPlayer.volume(30);
 }
 
-void sensorActivated() {
+
+void loop() {
   int pirSensor = digitalRead(SENSORPIN);
   if (pirSensor == HIGH) {
     Serial.println("Sensor Activated");
-    Serial.println("DFPlayer Working...");
     myDFPlayer.play(1);
   }
-  return;
 }
 
-void loop() {
-  sensorActivated();
-  delay(PAUSETIME);
-}
